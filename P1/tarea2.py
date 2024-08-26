@@ -5,6 +5,10 @@ import numpy as np
 img = Image.open('megaminions.png')
 img_np = np.array(img)
 
+# Verificar si la imagen tiene un canal alfa y eliminarlo si es necesario
+if img_np.shape[-1] == 4:
+    img_np = img_np[..., :3]  # Elimina el canal alfa
+
 # Definir el rango de colores a segmentar (por ejemplo, para un objeto rojo)
 lower_color = np.array([0, 0, 100])
 upper_color = np.array([50, 50, 255])
@@ -21,7 +25,7 @@ for i in range(img_np.shape[0]):
 
 # Convertir el resultado en una imagen
 result_img = Image.fromarray(mask)
-
+   
 # Guardar la imagen segmentada
 result_img.save('imagen_segmentada.png')
 
