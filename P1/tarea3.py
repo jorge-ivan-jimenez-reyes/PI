@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def ajustar_brillo(img, factor):
-  
+    
     img_modificada = img.copy()
     
     ancho, alto = img.size
@@ -21,19 +21,19 @@ def ajustar_brillo(img, factor):
             if len(pixel) == 4:
                 r, g, b, a = pixel  
             else:
-                r, g, b = pixel  # Desempaquetar RGB
+                r, g, b = pixel  
 
-            # Ajustar cada canal de color según el factor
+            
             r = int(r * factor)
             g = int(g * factor)
             b = int(b * factor)
             
-            # Asegurarse de que los valores se mantengan en el rango [0, 255]
+            
             r = min(255, max(0, r))
             g = min(255, max(0, g))
             b = min(255, max(0, b))
             
-            # Asignar el nuevo valor al píxel
+            
             if len(pixel) == 4:
                 img_modificada.putpixel((x, y), (r, g, b, a))  # Mantener el canal alfa
             else:
