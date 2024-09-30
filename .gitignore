@@ -1,0 +1,56 @@
+# Entorno virtual
+.venv/
+venv/
+ENV/
+env/
+
+# Archivos de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Archivos de configuración de Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos de configuración del entorno
+.env
+*.env
+
+# Archivos de compilación
+build/
+dist/
+*.egg-info/
+
+# Archivos de logs y datos temporales
+*.log
+*.bak
+*.tmp
+*.swp
+
+# Archivos de imágenes procesadas (opcional)
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.bmp
+*.gif
+
+# Archivos de salida de procesamiento de imágenes
+output/
+processed_images/
+
+# Archivos específicos del IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos de caché de pip
+pip-wheel-metadata/
+__pypackages__/
